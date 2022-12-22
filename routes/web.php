@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('api', function () {
+Route::post('api', function (Request $request) {
+    \Log::info($request->all());
     return response()->json('ok');
 });
