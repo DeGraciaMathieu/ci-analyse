@@ -19,6 +19,7 @@ Route::get('/', function () {
 });
 
 Route::post('api', function (Request $request) {
+    \Log::info('x');
     \Log::info($request->all());
     return response()->json('ok');
 });
